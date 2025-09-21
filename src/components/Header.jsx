@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
+import { IoHome } from "react-icons/io5";
 const Header = () => {
   return (
     <div className="bg-red-300 p-5">
@@ -9,6 +10,9 @@ const Header = () => {
           <span className="font-extrabold text-[tomato]">B</span>rand
         </h1>
         <div className="px-[1rem] max-[770px]:hidden flex gap-7 items-center">
+          <a href="">
+            <IoHome className="text-blue-700 text-2xl" />
+          </a>
           <a href="">Features</a>
           <a href="">Use Case</a>
           <a href="">Integrations</a>

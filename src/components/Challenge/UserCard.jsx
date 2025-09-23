@@ -1,5 +1,33 @@
 import React from "react";
+import {
+  FaFacebook,
+  FaInstagramSquare,
+  FaYoutube,
+  FaTwitter,
+} from "react-icons/fa";
 
+const socialMediaIcons = [
+  {
+    name: "facebook",
+    icon: FaFacebook,
+    className: "text-blue-600 hover:text-blue-800",
+  },
+  {
+    name: "instagram",
+    icon: FaInstagramSquare,
+    className: "text-pink-500 hover:text-pink-700",
+  },
+  {
+    name: "youtube",
+    icon: FaYoutube,
+    className: "text-red-600 hover:text-red-800",
+  },
+  {
+    name: "twitter",
+    icon: FaTwitter,
+    className: "text-sky-500 hover:text-sky-700",
+  },
+];
 // CHALLENGE 1:
 
 // https://www.codingnepalweb.com/wp-content/uploads/2022/12/Top-2010-20Profile-20Card-20Template-20Designs-20in-20HTML-20-amp-20CSS.jpg
@@ -19,6 +47,7 @@ import React from "react";
 //     Styling: All styling must be done using Tailwind CSS.
 
 //     Responsiveness: The layout should be fully responsive across different screen sizes.
+
 const UserCard = () => {
   return (
     <div className="flex justify-center items-center bg-gray-400 mx-auto min-h-[300px]">
@@ -48,10 +77,11 @@ const UserCard = () => {
           <p className="text-center text-sm mb-2">YouTuber & Blogger</p>
           <div className="flex justify-center gap-3 p-1">
             {/* Social Icons */}
-            <div>fbIcon</div>
-            <div>twitterIcon</div>
-            <div>instaIcon</div>
-            <div>youtubeIcon</div>
+            {socialMediaIcons.map(({ name, icon: Icon, className }) => (
+              <div className={`${className} text-2xl`} key={name}>
+                <Icon />
+              </div>
+            ))}
           </div>
           <div className="mt-5 flex justify-center gap-4">
             <button className="bg-blue-700 text-amber-100 rounded-[10px] p-1 px-4">

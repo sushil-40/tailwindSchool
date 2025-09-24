@@ -19,6 +19,7 @@ const StatItem = ({ icon: Icon, count, className }) => (
 
 // Main UserCard Component
 const UserCard = ({ user }) => {
+  if (!user) return null;
   const { name, role, profileImage, socialMedia, stats, buttons } = user;
 
   return (
